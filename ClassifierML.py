@@ -36,7 +36,7 @@ ucdavis_bike_features = ['Starting Latitude','Starting Longtitude',
                                                     'Ending Latitude', 'Ending Longtitude',
                                                         'Distance','TimeBiking','Value']
 X = ucdavis_newbike_data[ucdavis_bike_features]
-#Using a random forest classifier to pick best route for a Cuarto resident
+#Using a random forest classifier to pick best route for Cuarto residents
 ucdavis_model = RandomForestClassifier()
 #Fitting the model
 ucdavis_model.fit(X,y)
