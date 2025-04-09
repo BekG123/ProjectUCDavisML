@@ -1,1 +1,2 @@
-# ProjectML
+# My project aims to build software that integrates machine leanring for autonomous bikes starting with tests on the UC Davis campus
+# SciKit is used to see whether the autonomous bike will recognize shortest distance between the student and the bike(whereever the student left it)
