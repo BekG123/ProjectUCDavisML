@@ -6,7 +6,7 @@ import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 #Path of the UC Davis bike usage file
 ucdavis_bikes_file_path = r'C:\Users\bekhr\ProjectML\ProjectML\DataML\UCDavisbikedata.csv'
-#Reading path of the file
+#Reading path of the files
 ucdavis_bikes_data = pd.read_csv(ucdavis_bikes_file_path) #df = ucdavis_bikes_data
 #Pulling data into a summary table
 ucdavis_bikes_data.describe()

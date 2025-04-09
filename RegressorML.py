@@ -14,7 +14,7 @@ Cuarto_routes_data = ucdavis_bikes_data
 #Does not truncate resultant data matrix
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
-#Pulling out columns important for prediction 
+#Pulling out columns important for predictions
 ucdavis_newbike_data = Cuarto_routes_data[['Starting Latitude','Starting Longtitude',
                                                 'Waypoint 1(latitude)','Waypoint 1(longtitude)','Waypoint 2(latitude)','Waypoint 2(longtitude)','Waypoint 3(latitude)','Waypoint 3(longtitude)',
                                                     'Ending Latitude', 'Ending Longtitude',
