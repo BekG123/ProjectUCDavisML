@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.tree import DecisionTreeRegressor
 #Path of the UC Davis bike usage file
-ucdavis_bikes_file_path = "DataML\\UCDavisbikedata.csv"
+ucdavis_bikes_file_path = r'C:\Users\bekhr\ProjectML\ProjectML\DataML\UCDavisbikedata.csv'
 #Reading path of the file
 ucdavis_bikes_data = pd.read_csv(ucdavis_bikes_file_path)
 #Pulling data into a summary table
