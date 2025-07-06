@@ -9,9 +9,10 @@ ucdavis_bikes_file_path = r'C:\Users\bekhr\ProjectML\ProjectML\DataML\UCDavisbik
 #Reading path of the file
 ucdavis_bikes_data = pd.read_csv(ucdavis_bikes_file_path) #df = ucdavis_bikes_data
 #Pulling data into a summary table
-ucdavis_bikes_data.describe()
-#Pulling out only top columns(Cuarto routes)
-Cuarto_routes_data = ucdavis_bikes_data.iloc[3:6]
+ucdavis_bikes_data.describe() 
+#Pulling out only rows 3(4 by 0-indexing) to 6(actually 6) (Cuarto routes)
+Cuarto_routes_data = ucdavis_bikes_data.iloc[0:3]
+print(Cuarto_routes_data)
 #Does not truncate resultant data matrix
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
@@ -28,7 +29,7 @@ ucdavis_newbike_data_fixed = ucdavis_newbike_data[['Starting Latitude','Starting
                                                     'Ending Latitude', 'Ending Longtitude',
                                                         'Distance','TimeBiking','Value']]
 #Prediction Question: Which path is the best for a Cuarto resident?
-#Setting the Prediction Target
+#Setting the Prediction Target, that is y, which is optimal 'Routes'
 y = ucdavis_newbike_data[['Routes']].values.ravel()
 #Setting the inputs/features
 ucdavis_bike_features = ['Starting Latitude','Starting Longtitude',
@@ -47,6 +48,8 @@ best_route_index = np.argmax(average_prob)
 y_best_route = ucdavis_model.classes_[best_route_index]
 #Result
 print(f"The data we analyzed is {ucdavis_newbike_data_fixed}")
-print(f"The best route(highest avg. probability) for a Tercero resident is {y_best_route}")
+print(f"The best route(highest avg. probability) for a Cuarto resident is {y_best_route}")
 print(f"The probability matrix is {y_best_route_prob}")
 print(f"The average probability for each route is: {average_prob}")
+#Goal --> to give a route that has shortest time+distance
+##### SCRAPED ########
